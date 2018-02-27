@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  app: vovas-build-and-deploy
+  skip_cleanup: true
+  api_key:
+    secure: bDTrDC50hvHynb+Wi2GnC4FoTDQZuHPlYy9V56j4Sp2UAn43ZajO7hyyRvVF3QeNTUMRuBae5OtJylT4O1waT2NCQeuZ88uQIzmXL4tsKW3WLxNos2yiO7Mr/g9Db75ANx/jhrvMB5OUZcfoVsqxMPi340fxTYNUEw50n2pEjttQltcRGPy8Zdj74+MRYw/uUYl4a9w1/AMKATutZm37QACdYpnf5Fpa2wRrZ98TN+hlsa4UFRR2Mdfms558pH6Zt9DZ587tVnEVJitxb2/DX6EMw2ufe541m/3cN7mQFOSq3HqlGFEPTbnqyDfnpjfcrxEETuHP/GJJK4bkL0lH8rxj8HLn2eAkGyQnd7+sFvGFg5KcZ4l2SDSRPXJcMqE/8qrd/kzSCJckwZkYRdCxrLJNZnsaY52AFFFna5+SSLGnuUfb3g+HzIeN7NfJKjEv38uHNReSgft1gMyZ7oQRY/JMVGi81A5PymoWFoOPk7CjsU97yUnogz7a+HMqyhWRlJmx4qhlwYRiy/wEfdodzPj3GFtFudhiFwRqNEB09FAsIvhXvwAL7Mxz5c2et/el2BsPDbcsSPICSX5rckjVszEEyCNoyvGmkb+mZylz/bJYY5DaalsSjlD+eK9Tu+W4G/pkcaHPAYH5A0MAnnhhKeLBgIs2Xbg/DdD3WmHS0Oc=
